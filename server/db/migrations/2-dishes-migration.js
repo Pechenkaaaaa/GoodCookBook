@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      titel: {
+      title: {
         type: Sequelize.STRING,
       },
       ingredients: {
