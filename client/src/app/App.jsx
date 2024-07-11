@@ -7,7 +7,7 @@ import { setAccessToken } from '../services/axios';
 
 // импорт компонентов
 
-import Main from '../components/main/Main';
+import Dishes from '../components/dishes/Dishes';
 import Navbar from '../components/navbar/Navbar';
 import Registration from '../components/auth/Registration';
 import Authorization from '../components/auth/Authorization';
@@ -44,10 +44,10 @@ function App() {
   return (
     <div>
       <Navbar user={user} setUser={setUser} />
-      <h1 className='rotating-text'>Cooking</h1>
+      <h1 className='rotating-text'>Cook Book</h1>
       
       <Routes>
-        <Route path='/' element={<Main />} />
+        <Route path='/' element={<Dishes />} />
         <Route
           path='/registration'
           element={<Registration setUser={setUser} />}

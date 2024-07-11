@@ -7,7 +7,7 @@ module.exports = {
       'Dishes',
       [
         {
-          titel: '1-Maserati quattroporte',
+          title: '1-Maserati quattroporte',
           ingredients: 'Maserati quattroporte',
           ingredientsCount: 8,
           cookingTime: 30,
@@ -15,7 +15,7 @@ module.exports = {
           
         },
         {
-          titel: '2-Maserati quattroporte',
+          title: '2-Maserati quattroporte',
           ingredients: 'Maserati quattroporte',
           ingredientsCount: 8,
           cookingTime: 30,
@@ -23,7 +23,7 @@ module.exports = {
           
         },
         {
-          titel: '3-Maserati quattroporte',
+          title: '3-Maserati quattroporte',
           ingredients: 'Maserati quattroporte',
           ingredientsCount: 8,
           cookingTime: 30,
