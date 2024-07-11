@@ -1,6 +1,7 @@
 // import React from 'react';
 import { NavLink } from 'react-router-dom';
 import requestAxios, { setAccessToken } from '../../services/axios';
+import Dishes from '../dishes/Dishes';
 
 
 function Navbar({ user, setUser}) {
@@ -39,7 +40,7 @@ function Navbar({ user, setUser}) {
           })}
           to='/'
         >
-          Main
+          Рецепты
         </NavLink>
     {/* <div>asdasd</div> */}
         {/* <NavLink
@@ -73,7 +74,7 @@ function Navbar({ user, setUser}) {
           })}
           to='/registration'
         >
-          Registration
+          Регистрация
         </NavLink>
         <NavLink
           style={({ isActive }) => ({
@@ -84,7 +85,7 @@ function Navbar({ user, setUser}) {
           })}
           to='/authorization'
         >
-          Authorization
+          Авторизация
         </NavLink>
         </>
       )}

@@ -7,15 +7,15 @@ module.exports = {
       'Dishes',
       [
         {
-          titel: 'Щи',
+          title: 'Щи',
           ingredients: 'Мясо, Капуста белокочанная, Картофель, Морковь, Лук репчатый, Томатная паста, Лавровый лист, Перец чёрный молотый, Соль, Масло растительное',
-          ingredientsCount: 10
+          ingredientsCount: 10,
           cookingTime: 90,
           img: 'IMG#1',
           
         },
         {
-          titel: 'Борщ',
+          title: 'Борщ',
           ingredients: 'Говядина, Картофель, Капуста белокочанная, Свекла, Морковь, Лук репчатый, Томатная паста, Зелень петрушки, Соль, Масло растительное, Вода, Сметана ',
           ingredientsCount: 12,
           cookingTime: 110,
@@ -23,7 +23,7 @@ module.exports = {
           
         },
         {
-          titel: '3-Maserati quattroporte',
+          title: '3-Maserati quattroporte',
           ingredients: 'Maserati quattroporte',
           ingredientsCount: 8,
           cookingTime: 30,
