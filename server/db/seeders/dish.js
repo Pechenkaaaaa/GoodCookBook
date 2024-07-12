@@ -118,7 +118,7 @@ module.exports = {
 
 6Подавать со сметаной. При подаче по желанию добавить в тарелку мелко нарезанную петрушку.`,
           cookingTime: 80,
-          img: "Ihttps://eda.ru/images/RecipePhoto/930x622/rassolnik_152867_photo_159981.webp",
+          img: "https://eda.ru/images/RecipePhoto/930x622/rassolnik_152867_photo_159981.webp",
         },
         {
           title: "Пиццa",

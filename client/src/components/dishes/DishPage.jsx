@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./dishPage.css"
 
 function DishPage() {
   const [dish, setDish] = useState({});
@@ -15,13 +16,13 @@ function DishPage() {
   return (
     <>
       {Object.keys(dish).length && (
-        <>
-          <div><img src={dish.img}/></div>
-          <div>{dish.title}</div>
+        <div className="dish_conteiner">
+          <div><img src={dish.img} alt="ooochen' vkuuusno dish"/></div>
+          <div><h2>{dish.title}</h2></div>
           <div>{dish.ingredients}</div>
-          <div>{dish.cookingTime}</div>
+          <div>Время приготовления: <strong>{dish.cookingTime} минут</strong></div>
           <div>{dish.recipe}</div>
-        </>
+        </div>
       )}
     </>
   );
