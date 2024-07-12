@@ -5,12 +5,13 @@
 
 .dish_item {
   margin-bottom: 30px;
-  background-color: rgb(209, 209, 231);
+  background-color: rgb(180, 180, 185);
   max-width: 900px;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 30px;
 }
 
 .dish_img {
