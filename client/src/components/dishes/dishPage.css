@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+.dish_conteiner{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

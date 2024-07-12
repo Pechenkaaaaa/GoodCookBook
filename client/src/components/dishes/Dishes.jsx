@@ -23,7 +23,7 @@ function Dishes({user}) {
           <DishItem dish={dish} user={user} />
         </div>
       ))}
-      <footer>© Все права защищены, но это не точно</footer>
+      <footer>© Все права защищены, но это не точно. ООО "CoockersЪ"</footer>
     </div>
   );
 }
