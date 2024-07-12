@@ -22,4 +22,20 @@
 .dish_description{
     width: 450px;
     width: 100%;
+    position: relative;
+}
+
+
+.dish_description svg{
+    position: absolute;
+    top: 20px;
+    right: 10%;
+}
+
+.dish_description svg:hover{
+    cursor: pointer;
+}
+
+.clickedBtn{
+    fill: red;
 }

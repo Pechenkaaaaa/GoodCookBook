@@ -30,6 +30,7 @@ function Navbar({ user, setUser }) {
         position: "sticky",
         top:" 0",
         backgroundColor: "white",
+        zIndex: "2",
          // Добавить отступы
       }}
     >
