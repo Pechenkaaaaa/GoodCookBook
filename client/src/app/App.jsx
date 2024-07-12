@@ -11,7 +11,7 @@ import Dishes from "../components/dishes/Dishes";
 import Navbar from "../components/navbar/Navbar";
 import Registration from "../components/auth/Registration";
 import Authorization from "../components/auth/Authorization";
-
+import DishPage from "../components/dishes/DishPage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -56,6 +56,13 @@ function App() {
           path="/authorization"
           element={<Authorization setUser={setUser} />}
         />
+        <Route path="/dishes/:id" element={<DishPage setDishes={Dishes}/>} />
+        {/* <Route
+          path='/fermas/:fermaId'
+          element={<Animals user={user} animals={animals} setAnimals={setAnimals} />} // фото компонент
+          /> */}
+
+        {/* <Route path='*' element={<ErrorPage />} /> */}
       </Routes>
     </div>
   );

@@ -60,16 +60,10 @@ function DishItem({ dish, user }) {
             d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.987 10.987 0 0 0 15 8"
           />
         </svg>
-        <h2>
-          <a href="#">{dish.title} </a>
-        </h2>
-        <p style={{ padding: "5px" }}>{dish.ingredients} </p>
-        <p style={{ paddingBottom: "0px", marginBottom: "0px" }}>
-          <strong>Время приготовления:</strong>
-        </p>
-        <p style={{ paddingTop: "0px", marginTop: "0px" }}>
-          {dish.cookingTime} минут
-        </p>
+        <h2 ><a href={`/dishes/${dish.id}`}>{dish.title} </a></h2>
+        <p style={{padding: "5px"}}>{dish.ingredients} </p>
+        <p style={{paddingBottom: "0px", marginBottom: "0px"}}><strong>Время приготовления:</strong></p>
+        <p style={{paddingTop: "0px", marginTop: "0px"}}>{dish.cookingTime} минут</p>
       </div>
     </>
   );
