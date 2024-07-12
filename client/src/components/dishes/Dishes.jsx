@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DishItem from "./DishItem";
+import "./dishes.css"
+import DishPage from "./DishPage";
 
 function Dishes() {
   const [dishes, setDishes] = useState([]);
@@ -17,10 +19,11 @@ function Dishes() {
   return (
     <div className="dishes_container">
       {dishes.map((dish) => (
-        <div key={dish.id}>
+        <div className="dish_item" key={dish.id}>
           <DishItem dish={dish}  />
         </div>
       ))}
+      <footer>© Все права защищены, но это не точно</footer>
     </div>
   );
 }

@@ -1,16 +1,15 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import requestAxios, { setAccessToken } from '../../services/axios';
-
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import requestAxios, { setAccessToken } from "../../services/axios";
+import "./AufReg.css";
 
 function Authorization({ setUser }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
-  function validation(email, password ) {
-    if (email.trim() === '' || password.trim() === '') {
+  function validation(email, password) {
+    if (email.trim() === "" || password.trim() === "") {
       setError("Заполните поле");
       return false;
     }
@@ -24,50 +23,50 @@ function Authorization({ setUser }) {
 
     if (!validation(email, password)) {
       return;
-    } 
-try {
-    const { data } = await requestAxios.post('/auth/authorization', {
-      email,
-      password,
-    });
-    console.log(data.user);
-    if (data.message === 'success') {
-      setUser(data.user);
-      setAccessToken(data.accessToken);
-      navigate('/');
-      return;
-    }  
-  } catch (message) {
-    console.log(message.response.data.message);
-    setError(message.response.data.message); 
-    console.log(message);
-  }
-    };
-
-
+    }
+    try {
+      const { data } = await requestAxios.post("/auth/authorization", {
+        email,
+        password,
+      });
+      console.log(data.user);
+      if (data.message === "success") {
+        setUser(data.user);
+        setAccessToken(data.accessToken);
+        navigate("/");
+        return;
+      }
+    } catch (message) {
+      console.log(message.response.data.message);
+      setError(message.response.data.message);
+      console.log(message);
+    }
+  };
 
   return (
     <div>
-      <h1  style={{color: 'black'}}>Authorization Page</h1>
-      <form className='auth' onSubmit={onHadleSubmit}>
-        <label htmlFor='email'>
+      <h2 className="authTitle">Войти</h2>
+      <form className="auth" onSubmit={onHadleSubmit}>
+        <label htmlFor="email">
           <input
-            type='email'
-            placeholder='email'
+          required
+            type="email"
+            placeholder="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
-        <label htmlFor='password'>
+        <label htmlFor="password">
           <input
-            type='password'
-            placeholder='password'
+            required
+            type="password"
+            placeholder="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <span style={{color: '#ccffcc'}}>{error && <p>{error}</p>}</span>
-        <button type='submit'>Войти</button>
+        <span style={{ color: "#ccffcc" }}>{error && <p>{error}</p>}</span>
+        <button type="submit">Войти</button>
       </form>
     </div>
   );

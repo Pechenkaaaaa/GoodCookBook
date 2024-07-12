@@ -1,0 +1,35 @@
+.auth,
+.registration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth label,
+.registration label{
+    margin-bottom: 8px;
+    
+}
+
+.auth input,
+.registration input{
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    text-indent: 10px;
+    
+}
+
+.auth button,
+.registration button{
+    width: 200px;
+    margin-top: 20px;
+}
+
+.registrationTitle,
+.authTitle{
+    color: black;
+    font-size: 30px;
+}
+
