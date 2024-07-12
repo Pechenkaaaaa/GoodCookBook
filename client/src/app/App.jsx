@@ -47,7 +47,7 @@ function App() {
       <h1 className="rotating-text">Cook Book</h1>
 
       <Routes>
-        <Route path="/" element={<Dishes />} />
+        <Route path="/" element={<Dishes user={user} />} />
         <Route
           path="/registration"
           element={<Registration setUser={setUser} />}
@@ -56,12 +56,6 @@ function App() {
           path="/authorization"
           element={<Authorization setUser={setUser} />}
         />
-        {/* <Route
-          path='/fermas/:fermaId'
-          element={<Animals user={user} animals={animals} setAnimals={setAnimals} />} // фото компонент
-          /> */}
-
-        {/* <Route path='*' element={<ErrorPage />} /> */}
       </Routes>
     </div>
   );

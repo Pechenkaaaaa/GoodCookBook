@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./dishes.css";
 
-function DishItem({ dish }) {
+function DishItem({ dish, user }) {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
@@ -14,15 +14,19 @@ function DishItem({ dish }) {
 
   //const [favoriteDish, setFavoriteDish] = useState({});
 
-  const postFavoriteDishes = async (dishForAdd) => {
-    const addFavoriteDish = await axios.post("/api/favorites", dishForAdd); //? уточнить адрес
+  const postFavoriteDishes = async (dishId, userId) => {
+    const addFavoriteDish = await axios.post("/api/favorites", {
+      dishId,
+      userId,
+    }); //? уточнить адрес
+    console.log(addFavoriteDish);
   };
 
-  const deleteFavoriteDish = async (id, dishForDelete) => {
+  const deleteFavoriteDish = async (dishId, userId) => {
     const deleteFavotiteDish = await axios.delete(
-      `/api/favorites/${id}`,
-      dishForDelete
+      `/api/favorites/users/${userId}/dishes/${dishId}`
     ); //? уточнить адрес
+    console.log(deleteFavotiteDish);
   };
 
   //   useEffect(() => {
@@ -36,10 +40,10 @@ function DishItem({ dish }) {
       </div>
       <div className="dish_description">
         <svg
-          onClick={(event) =>
+          onClick={() =>
             isClicked
-              ? (handleClick(), postFavoriteDishes(dish))
-              : (handleClick(), deleteFavoriteDish(dish.id, dish))
+              ? (handleClick(), deleteFavoriteDish(dish.id, user.id))
+              : (handleClick(), postFavoriteDishes(dish.id, user.id))
           }
           xmlns="http://www.w3.org/2000/svg"
           width="36"
