@@ -47,7 +47,7 @@ function App() {
       <h1 className="rotating-text">Cook Book</h1>
 
       <Routes>
-        <Route path="/" element={<Dishes />} />
+        <Route path="/" element={<Dishes user={user} />} />
         <Route
           path="/registration"
           element={<Registration setUser={setUser} />}
