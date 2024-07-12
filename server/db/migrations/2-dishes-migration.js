@@ -19,6 +19,9 @@ module.exports = {
       ingredientsCount: {
         type: Sequelize.INTEGER,
       },
+      recipe : {
+        type: Sequelize.TEXT,
+      },
       cookingTime: {
         type: Sequelize.INTEGER,
       },
