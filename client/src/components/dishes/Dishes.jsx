@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DishItem from "./DishItem";
 import "./dishes.css"
+import DishPage from "./DishPage";
 
 function Dishes() {
   const [dishes, setDishes] = useState([]);
