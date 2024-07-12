@@ -16,7 +16,7 @@ function DishPage() {
     <>
       {Object.keys(dish).length && (
         <>
-          <div>{dish.img}</div>
+          <div><img src={dish.img}/></div>
           <div>{dish.title}</div>
           <div>{dish.ingredients}</div>
           <div>{dish.cookingTime}</div>
